@@ -259,4 +259,5 @@ def get_python_version():
             ['python', '--version'], stdout=subprocess.PIPE)
         if completed2.returncode != 0:
             raise
+        return completed2.stdout.decode('utf-8').splitlines()[0].split(' ')[-1]
     return completed.stdout.decode('utf-8').splitlines()[0].split(' ')[-1]
