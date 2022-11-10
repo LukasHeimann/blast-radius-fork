@@ -249,6 +249,7 @@ def get_terraform_exe():
 
 
 def get_python_version():
+    return "3.10"
 
     completed = subprocess.run(
         ['python3', '--version'], stdout=subprocess.PIPE)
